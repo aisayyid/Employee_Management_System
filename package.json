@@ -1,0 +1,24 @@
+{
+  "name": "employee_management_system",
+  "version": "1.0.0",
+  "description": "App that manages a company's employees through a command line application and stores the info into a database.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aisayyid/Employee_Management_System.git"
+  },
+  "author": "Alex Isayyid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aisayyid/Employee_Management_System/issues"
+  },
+  "homepage": "https://github.com/aisayyid/Employee_Management_System#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.3.2",
+    "mysql": "^2.18.1"
+  }
+}
