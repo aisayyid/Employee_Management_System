@@ -1,5 +1,6 @@
 # Employee_Management_System
 ![](https://img.shields.io/badge/License-MIT-blue)
+
 An app for managing a company's employees and storing to a database using node, inquirer, and MySQL.
 ## Table of Contents:
   - [Installation](#Installation)
