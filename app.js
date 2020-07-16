@@ -26,3 +26,9 @@ connection.connect(function(err) {
 });
 
 connection.end();
+
+//Set up inquirer prompts.
+//First prompt should have options to add an employee, view an employee, or update employee role.
+//If add employee, should ask you first name, then last name, then list of roles, then id.
+//If update employee roles, list of roles to replace current role.
+//If view employees is chose, should show employees witht heir department, and roles.
