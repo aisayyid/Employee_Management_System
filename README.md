@@ -16,6 +16,23 @@ An app for managing a company's employees and storing to a database using node, 
   ## License
   MIT
   ## Breakdown
+  ![](images/employeeDB.png)
+  
+  ![](images/seed.png)
+  
+  ![](images/server.png)
+  
+  ![](images/startup.png)
+  
+  ![](images/addEmployee.png)
+   
+  ![](images/updateEmployee.png)
+  
+  ![](images/viewEmployees.png)
+  
+  ![](images/getEmployees.png)
+  
+  ![](images/getRoles.png)
   
   ## Tests
   
