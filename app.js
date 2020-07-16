@@ -148,7 +148,8 @@ async function getRoles() {
 
 //es6 way
 const viewEmployees = async () => {
-  let [employeeRows, data] = await connection.query("SELECT * from employeesdb.employee");
+  let [employeeRows, data] = await connection.query("SELECT employee.id, employee.first_name, employee.last_name, roles.title, roles.salary from employeesdb.employee LEFT JOIN roles on roles.id = employee.role_id");
   console.table(employeeRows);
   start();
 }
+// "SELECT roles.id, roles.title, department.name AS department, roles.salary FROM roles LEFT JOIN department on roles.department_id = department.id;"
