@@ -9,15 +9,15 @@ async function startup() {
   // create the connection information for the sql database
   connection = await mysql.createConnection({
     host: "localhost",
-// Your port; if not 3306
+    // Your port; if not 3306
     port: 3306,
-// Your username
+    // Your username
     user: "root",
-// Your password
+    // Your password
     password: "root",
     database: "employeesdb"
   });
-// connect to the mysql server and sql database
+  // connect to the mysql server and sql database
   // run the start function after the connection is made to prompt the user
   start();
 }
@@ -79,10 +79,10 @@ async function addEmployee() {
         //calls the roles const, which will list out all the roles instead of physically typing all of it.
         choices: roles
       },
-])
-//Query which will add the employee into the employee table in database.
+    ])
+  //Query which will add the employee into the employee table in database.
   await connection.query("INSERT INTO employee SET ?", employeeAnswers);
-//calls start to loop back to beginning prompt.
+  //calls start to loop back to beginning prompt.
   start();
 }
 //Function to update employee role.
@@ -109,7 +109,7 @@ async function updateEmployee() {
         choices: roles
       }
     ])
-//Updates chosen role by the id of the employee selected in the database.
+  //Updates chosen role by the id of the employee selected in the database.
   await connection.query("UPDATE employee SET ? WHERE ?",
     [
       {
@@ -119,7 +119,7 @@ async function updateEmployee() {
         id: employeeUpdate.id
       }
     ]);
-//Loops back to the first prompt.
+  //Loops back to the first prompt.
   start();
 }
 //Function which will query for employees, concat the first and last names to make full names, then map the employee name and id out.
@@ -130,7 +130,7 @@ async function getEmployees() {
 }
 
 async function getRoles() {
-//get roles from db for inquirer.
+  //get roles from db for inquirer.
   let [roles, data] = await connection.query("SELECT id, title from employeesdb.roles")
   return roles.map(role => { return { name: role.title, value: role.id } })
 }
