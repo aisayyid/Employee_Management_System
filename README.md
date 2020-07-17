@@ -32,17 +32,23 @@ An app for managing a company's employees and storing to a database using node, 
   
   ![](images/startup.png)
   
-  - Calls a getRoles function which brings up the query (explained below).  Brings up prompts to ask for new employee information stored in the const employeeAnswers.  Once answered, querys the data base to insert the employeeAnswers into the database.  Ends by calling start function to take user back to initial prompt.
+  - addEmployee, which calls getRoles function which brings up the query (explained below).  Brings up prompts to ask for new employee information stored in the const employeeAnswers.  Once answered, querys the data base to insert the employeeAnswers into the database.  Ends by calling start function to take user back to initial prompt.
   
   ![](images/addEmployee.png)
   
-  - Calls getEmployees function and getRoles (both explained below), which brings in queries.  Prompts the users for questions pertaining to update the employee. It will bring up a list containing the employees full name through the employeeRows const, and a list of roles to update to within the roles const.  Once answered, a query is made to the database to update employees at role_id and id, using the employeeUpdate const which will contain the answers from the user.  Ends by calling start function, which will bring the user back to the inital prompt.
+  -  updateEmployee, which calls getEmployees function and getRoles (both explained below), which brings in queries.  Prompts the users for questions pertaining to update the employee. It will bring up a list containing the employees full name through the employeeRows const, and a list of roles to update to within the roles const.  Once answered, a query is made to the database to update employees at role_id and id, using the employeeUpdate const which will contain the answers from the user.  Ends by calling start function, which will bring the user back to the inital prompt.
    
   ![](images/updateEmployee.png)
   
+  - viewEmployees function, which contains a query with the correct data selected, to show a table using console.table which contains all of the companies employees, their roles and salary.  Also ends by calling the start function to go back to inital prompt.
+  
   ![](images/viewEmployees.png)
   
+  - The getEmployees function contains a query that selects and concats the employees first and last names and return their values as a new array using the map method.  This function can then be called to pull up a list of the employees with their full names.
+  
   ![](images/getEmployees.png)
+  
+  - Like the getEmployees function, the getRoles function also sets up a query that can be easily called when the employees roles are needed.  It selects the id and title from the role database and creates an array with that info using the map method as well.
   
   ![](images/getRoles.png)
   
