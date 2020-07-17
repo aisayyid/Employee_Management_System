@@ -24,7 +24,7 @@ An app for managing a company's employees and storing to a database using node, 
   
   ![](images/seed.png)
   
-  - Code to create and start server.  Requires a connection with sql.  Also additional code that requires inquirer and console.table for functionality.
+  - Code to create and start server.  Requires a connection with MySQL.  Also additional code that requires inquirer and console.table for functionality.
   
   ![](images/server.png)
   
